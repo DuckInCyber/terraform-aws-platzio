@@ -29,7 +29,7 @@ variable "helm_release_name" {
 variable "chart_version" {
   description = "Helm chart version to install/upgrade"
   type        = string
-  default     = "0.4.2"
+  default     = "0.4.6"
 }
 
 variable "ingress" {
@@ -96,4 +96,14 @@ variable "k8s_agents" {
     name         = string
     iam_role_arn = string
   }))
+}
+
+variable "domain" {
+  description = "Domain to use for ingress"
+  type        = string
+}
+
+variable "tls_secret_name" {
+  description = "Secret name to use for ingress TLS"
+  type        = string
 }
