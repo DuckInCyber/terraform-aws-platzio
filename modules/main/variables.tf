@@ -97,3 +97,13 @@ variable "k8s_agents" {
     iam_role_arn = string
   }))
 }
+
+variable "domain" {
+  description = "Domain to use for ingress"
+  type        = string
+}
+
+variable "tls_secret_name" {
+  description = "Secret name to use for ingress TLS"
+  type        = string
+}
